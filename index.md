@@ -1,9 +1,8 @@
-﻿# Project Name/Title Goes Here
-This will serve as a brief description of your project. Limit this to three sentences because it can become overly long at that point. This copy should draw the user in and make she/him want to read more.
+﻿# Phone Controlled Robot Arm
+Using an Arduino Uno and Servo Motors, the arm can make controlled movements and complete certain tasks within the range of the movements.
 
-| **Engineer** | **School** | **Area of Interest** | **Grade** |
+| Hadley Griffin-Schmidt | Urban School of San Francisco | Mechanical Engineering | Rising Senior |
 |:--:|:--:|:--:|:--:|
-| Firstname Lastname | Current Highschool | Electrical Engineering | Incoming Senior
 
 ![Headstone Image](https://bluestampengineering.com/wp-content/uploads/2016/05/improve.jpg)
   
