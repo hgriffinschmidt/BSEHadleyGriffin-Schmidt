@@ -1,4 +1,4 @@
-﻿# Phone Controlled Robot Arm
+﻿# Robot Arm
 Using an Arduino Uno and Servo Motors, the arm can make controlled movements and complete certain tasks within the range of the movements.
 
 | Hadley Griffin-Schmidt | Urban School of San Francisco | Mechanical Engineering | Rising Senior |
@@ -12,9 +12,9 @@ My final milestone is the increased reliability and accuracy of my robot. I amel
 [![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 
 # Second Milestone
-My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint.
+For my second milestone I decided to focus on potentiometers. Noticing that the potentiometers would be essential for the final product - controlling the movement of the specficic joints of the arm - I spent my time learning how to use imputs and convert them to outputs with the arduino. To store the initial imputs, I had the arduino read the signal coming from the potentiometer using analogRead() - from 0 to 1023 - and store it in a previously defined varible. To use the analogRead() function, I had to hook up the potentiometer to one of the analog pins. Once the imput value had been stored, the next step was mapping out the value to the range of the motor. Being that the motor only rotates between 0 and 179 and the value of the potentiometer ranged from 0 to 1023, the map() funtion allowed me to scale down the values so the  turn of the potentiometer would correlate directly with the servo rotation. To store this new value I used a different "output value", also perviosuly defined. Finally, now that the value has been converted, the arduino sends the output value to the servo using [servo].write() and the servo turns accordingly.
 
-[![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
+[![Second Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
 # First Milestone
   
 
