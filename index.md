@@ -1,5 +1,5 @@
 ﻿# Robot Arm
-Using an Arduino Uno and Servo Motors, the arm can make controlled movements and complete certain tasks within the range of the movements.
+Using an Arduino Uno and Servo Motors controlled by Potentiometers, the arm can make controlled movements and complete certain tasks within the range of the movements.
 
 | Hadley Griffin-Schmidt | Urban School of San Francisco | Mechanical Engineering | Rising Senior |
 |:--:|:--:|:--:|:--:|
@@ -8,7 +8,8 @@ Using an Arduino Uno and Servo Motors, the arm can make controlled movements and
 
   
 # Final Milestone
-My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint. 
+My final milestone is the physical build of the arm, its circuitry, the code, and a personal modification using an ultrasonic sensor. The arm itself is controlled by 4 potentiometers which each correspond to dc motor powering a certain joint: hand, elbow, shoulder, and base. To function, the arduino reads an input coming from the potentiometer - 0 to 1023 - using the analogRead function. Once that value has been stored, the code scales the input down to a proportional output within each motors turning radius using a function called map. In the previous milestone, the value was mapped to the range of 0 to 180 becuase the motor was allowed its full turning radius, but due to the factory build of the arm, the elbow motor, for example, is only allowed to turn between 40 to 150 degrees. So, through testing, I had to find each motors allowed range. Finally, the arduino sends the newly mapped value to the motor and thus the arm moves using the analogWrite function.  My personal modificaion was the addition of a ultrasonic sensor tothe base of the arm. The ultrasoncic sensor sends a wave and then listens for its return, measuring the amout of time it tokk to return. That duration value can then be converted to distance - cm in my case. For my project, using an if statement, I porgrammed the arm to stop reading the potentiometers if it senses an object within 20 cm and open the claw such that it would drop any object it were holding.
+
 
 [![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 
